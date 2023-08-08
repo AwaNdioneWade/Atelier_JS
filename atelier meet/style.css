@@ -1,0 +1,24 @@
+#enonce{
+    font-size: 28px;
+}
+#balises input{
+    margin-top: 20px;
+    width: 250px;
+    height: 35px;
+    font-size: 20px;
+}
+#balises button{
+    width: 70px;
+    height: 30px;
+    font-size: 16px;
+    background-color: aquamarine;
+    border: none;
+    cursor: pointer;
+    margin-left: 15px;
+}
+#balises{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
