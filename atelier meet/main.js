@@ -6,16 +6,13 @@ const enonce = document.getElementById("enonce")
 
 function insererbalise(balises, textAInserer) {
     let baliseHTML =  document.createElement('p');
-    baliseHTML.innertext = (`Choisissez une des balises HTML pour encradrer`);
+    baliseHTML.innertext = (`Choisissez une balise HTML`);
     enonce.append(baliseHTML.innertext);
     
     choosebalise.addEventListener('click', function(){
-
         if (inputbalise.value == ""){
         alert('Veillez d\'abord entrer le nom de la balise');
-        }
-    
-        else{
+        }else{
             balises = inputbalise.value
             const balise = document.createElement(balises);
             const textbalise = document.createTextNode(textAInserer);
@@ -27,5 +24,4 @@ function insererbalise(balises, textAInserer) {
         }
     }) 
 }
-console.log(divBalises)
-insererbalise(balises, "Mon texte")
+insererbalise(balises, "Atelier meet")
