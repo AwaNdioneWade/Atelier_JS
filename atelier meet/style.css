@@ -1,9 +1,26 @@
 #enonce{
     font-size: 28px;
+    margin-top: 50px;
 }
-#balises input{
+#balises {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    word-break: break-all;
+    margin: auto;
+}
+
+#balises #textAInserer{
     margin-top: 20px;
-    width: 200px;
+    width: 400px;
+    height: 60px;
+    font-size: 16px;
+    word-break: break-all;
+}
+#balises #input{
+    margin-top: 20px;
+    width: 300px;
     height: 30px;
     font-size: 16px;
 }
@@ -15,10 +32,6 @@
     border: none;
     cursor: pointer;
     margin-left: 15px;
+    margin-top: 20px;
 }
-#balises{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
-}
+
