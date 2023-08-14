@@ -15,7 +15,7 @@ function insererbalise(balises, textAInserer) {
         if (inputbalise.value == ""){
         alert('Veillez d\'abord entrer le nom de la balise');
         }else{
-            const tabBalisesHTML = ["h1", "h2", "h3", "h4", "h5", "h6", "p", "span", "em", "b"]
+            const tabBalisesHTML = ["h1", "h2", "h3", "h4", "h5", "h6", "p", "span", "em", "b", "li", "td", "tr", "strong"]
             let tableauEnMajuscules = tabBalisesHTML.map(element => element.toUpperCase());
 
             if (tabBalisesHTML.indexOf(balises) === -1 && tableauEnMajuscules.indexOf(balises) === -1) {
