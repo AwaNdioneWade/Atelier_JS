@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Font favicon -->
+        <link rel="icon" href="images/favicon.png">
+        <!-- bootstrap5 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        <script src="https://kit.fontawesome.com/3e56bd9026.js" crossorigin="anonymous"></script>
+        <!-- Font Awesome5 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- button navbar -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+        <!-- tooltip -->
+        <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+        </script>
+        <title>Calculatrice en ligne</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="en-tete">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <p>ma-Calculatrice.fr</p>
+                </div>
+                <div class="col-12 col-md-6 d-flex justify-content-end">
+                    <p>Des calculettes toutes simples</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">CALCULATR.</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">TEMPS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">FINAN.</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">INFORM.</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">DIV.</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">CONV.</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">GEOM.</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">.</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <section class="Calculatrice">
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-12 col-md-5">
+                </div>
+                <div class="col-none col-md-6">
+                    <div id="maCalculatrice" class="container-fluid">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <p class=" text-center"><a href="#">Ma Calculatrice toute simple:</a> Calculatrice simple</p>
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 affiche">
+                                <div id="espaceAffiche1" class="d-flex flex-row justify-content-end align-items-end">
+                                  <h1 id="espaceAffiche1H1"></h1>
+                                </div>
+                                <div id="espaceAffiche2" class="d-flex flex-row justify-content-star">
+                                  <h1 id="espaceAffiche2H1"></h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row boutons d-flex ms-2 my-5">
+                          <div class="bouton" data-key="57">9</div>
+                          <div class="bouton" data-key="104">8</div>
+                          <div class="bouton me-md-5 me-0" data-key="103">7</div>
+                          <div class="bouton" data-key="8" id="ce">CE</div>
+                          <div class="bouton" data-key="46" id="cc">C</div>
+
+                          <div class="bouton" data-key="100">4</div>
+                          <div class="bouton" data-key="101">5</div>
+                          <div class="bouton me-md-5 me-0" data-key="102">6</div>
+                          <div class="bouton" data-key="111">/</div>
+                          <div class="bouton" data-key="106">*</div>
+
+                          <div class="bouton" data-key="97">1</div>
+                          <div class="bouton" data-key="98">2</div>
+                          <div class="bouton me-md-5 me-0" data-key="99">3</div>
+                          <div class="bouton" data-key="109">-</div>
+                          <div class="bouton" data-key="187">+</div>
+
+                          <div class="bouton" data-key="96">0</div>
+                          <div class="bouton" data-key="110">.</div>
+                          <div class="bouton" data-key="13">=</div>
+                    
+                          <div class="bouton" data-key="">Séparer milliers*</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="main.js"></script>
+</body>
+</html>
