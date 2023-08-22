@@ -11,15 +11,16 @@ function insererbalise(balises, textAInserer) {
     enonce.append(baliseHTML);
     
     choosebalise.addEventListener('click', function(){
-        balises = inputbalise.value
+        balises = inputbalise.value.toLowerCase();
         if (inputbalise.value == ""){
         alert('Veillez d\'abord entrer le nom de la balise');
         }else{
-            const tabBalisesHTML = ["h1", "h2", "h3", "h4", "h5", "h6", "p", "span", "em", "b", "li", "td", "tr", "strong"]
-            let tableauEnMajuscules = tabBalisesHTML.map(element => element.toUpperCase());
+            const tabBalisesHTML = ["a", "abbr", "address", "applet", "area", "article", "acronym", "aside", "audio", "b", "base", "basefont", "bdi", "bdo", "big", "blockquote", "body", "br", "button", "canvas", "caption", "center", "cite", "code", "col", "colgroup", "data", "datalist", "dd", "del", "details", "dfn", "dialog", "dir", "div", "dl", "dt", "embed", "fieldset", "figcaption", "figure", "font", "footer", "form", "frame", "frameset", "h1", "h2", "h3", "h4", "h5", "h6", "head", "header", "hr", "html", "i", "iframe", "img", "input", "ins", "kbd", "label", "legend", "link", "main", "map", "mark", "meta", "meter", "nav", "noframes", "noscript", "object", "ol", "optgroup", "option", "output", "param", "picture", "pre", "progress", "p", "q", "rp", "rt", "ruby", "s", "samp", "script", "section", "select", "small", "source", "strike", "style", "sub", "span", "summary", "sup", "em", "b", "li", "td", "tr", "table", "tbody", "td", "template", "textarea", "tfoot", "th", "thead", "time", "title", "tr", "track", "tt", "u", "ul", "var", "video", "wbr", "strong"]
+         
+            // let tableauEnMajuscules = tabBalisesHTML.map(element => element.toUpperCase());
 
-            if (tabBalisesHTML.indexOf(balises) === -1 && tableauEnMajuscules.indexOf(balises) === -1) {
-                alert(`Vous devrez mettre une balise HTML qui entoure un texte par exemple la balise p ou h1`);                
+            if (tabBalisesHTML.indexOf(balises) === -1 ) {
+                alert(`Vous devrez mettre une balise HTML valide exemple la balise p ou h1`);                
             } else {
                     const balise = document.createElement(balises);
                     textAInserer = inputText.value
@@ -30,6 +31,6 @@ function insererbalise(balises, textAInserer) {
             inputbalise.value = "";
             inputText.value = "";
         }
-    }) 
+    })   
 }
 insererbalise(balises, textAInserer)
