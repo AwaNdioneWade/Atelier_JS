@@ -4,8 +4,8 @@ const bouton2 = document.getElementById("deux")
 const bouton3 = document.getElementById("trois")
 const bouton4 = document.getElementById("quatre")
 const bouton5 = document.getElementById("cinq")
-
-bouton1.addEventListener('click', function(){
+ 
+bouton1.addEventListener('click', function(){ 
         Case.classList.toggle('border-raduis25')
         Case.classList.remove('border-raduis35')
         Case.classList.remove('border-raduis45')
