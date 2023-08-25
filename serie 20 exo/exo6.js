@@ -1,10 +1,10 @@
 let container = document.getElementById('container')
 let ht = prompt('Donnez le prix HT du produit')
 let tva = prompt('Donnez TVA du produit')
-let number = 50
+// let number = 100
 let ttc = ht * (tva/100)
 container.innerHTML = ttc;
-if (ttc < number) {
+if (ttc < 100) {
     container.style.color = "red"
 }else {
     container.style.color = "yellow"
