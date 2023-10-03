@@ -1,0 +1,55 @@
+/* body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+
+h1{
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container{
+    padding: 10px;
+}
+
+.ajout{
+    width: 100%;
+    background-color: green;
+    border: none;
+}
+
+input, tr{
+    height: 40px;
+    border-radius: 5px;
+    border-color: beige;
+}
+table{
+    background-color: pink;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+thead tr{
+    margin-top: 20px;
+    border-bottom: 3px solid black;
+    justify-content: space-around;
+}
+tbody tr{
+    justify-content: space-around;
+}
+
+.edit{
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: yellow;
+}
+.supp{
+    margin-left: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: red;
+}
