@@ -5,7 +5,7 @@
     flex-direction: column;
 } */
 
-h1{
+h1, h3{
     text-align: center;
     margin-top: 20px;
 }
@@ -20,13 +20,19 @@ h1{
     border: none;
 }
 
+.modifie{
+    width: 100%;
+    background-color: yellow;
+    border: none;
+    display: none;
+}
+
 input, tr{
     height: 40px;
     border-radius: 5px;
     border-color: beige;
 }
 table{
-    background-color: pink;
     width: 80%;
     margin: auto;
     text-align: center;

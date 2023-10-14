@@ -1,0 +1,25 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(2, 23, 41);
+    color: aliceblue;
+    text-align: center;
+}
+
+
+#sports{
+    border: 5px solid #fff;
+    border-radius: 10px;
+    padding: 40px;
+}
+
+#football, #basketball, #boxing, #golf, #rugby{
+    border: 3px solid #fff;
+    list-style: none;
+    padding: 10px;
+    margin: 3px;
+    background-color: #fff;
+    color: rgb(2, 23, 41);
+    text-transform: uppercase;
+}

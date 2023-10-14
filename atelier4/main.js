@@ -10,7 +10,6 @@ let stock =""
 let calcul
 document.addEventListener('keydown', (e) =>{
     const valeur = e.keyCode.toString();
-    console.log(valeur);
     calcule(valeur)
 })
 
@@ -43,7 +42,7 @@ const calcule = function(valeur){
             if (valeur === "187" || valeur === "109" || valeur === "106" || valeur === "111") {
                 espaceAffiche1H1.innerText = bouton.innerHTML
                 let str = stock.slice(0, -1)
-                console.log(stock);
+                console.log(espaceAffiche1H1.innerText);
                 espaceAffiche2H1.innerHTML = eval(str)
             }
         }

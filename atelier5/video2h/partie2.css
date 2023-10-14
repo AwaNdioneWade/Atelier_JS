@@ -1,0 +1,32 @@
+body{
+    margin-top: 50px;
+    background-color: rgb(2, 23, 41);
+    color: aliceblue;
+    text-align: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.boxes{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    border: 1px solid aliceblue;
+    border-radius: 20px;
+    height: 200px;
+    padding: 20px;
+}
+
+.boxes button{
+    background-color: aliceblue;
+    color: rgb(2, 23, 41);
+    border-radius: 10px;
+    width: 75%;
+    height: 30px;
+}

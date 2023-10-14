@@ -1,0 +1,41 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 85%);
+}
+
+.espaceAffiche{
+    background-color: #fff;
+    border-radius: 15px 15px 150px 15px;
+
+}
+
+input{
+    border-radius: 15px;
+    border: 1px solid hsl(0, 0%, 85%);
+}
+
+button{
+    background-color: hsl(259, 100%, 65%);
+    color: #fff;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    border: none;
+}
+.age{
+    font-family: "Poppins", sans-serif;
+}
+.age h1 {
+    font-size: 50px;
+    font-weight: 800;
+    font-style: italic;
+    height: fit-content;
+}
+
+.age span{
+    font-size: 50px;
+    color: hsl(259, 100%, 65%);
+}

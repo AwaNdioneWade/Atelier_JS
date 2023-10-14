@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <!-- Font favicon -->
+            <link rel="icon" href="images/favicon.png">
+            <!-- bootstrap5 -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+            <script src="https://kit.fontawesome.com/3e56bd9026.js" crossorigin="anonymous"></script>
+            <!-- Font Awesome6 -->
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/fontawesome.min.css" integrity="sha512-SgaqKKxJDQ/tAUAAXzvxZz33rmn7leYDYfBP+YoMRSENhf3zJyx3SBASt/OfeQwBHA1nxMis7mM3EV/oYT6Fdw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+            <!-- google font -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto&display=swap" rel="stylesheet">
+            <!-- button navbar -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"></script>
+            <!-- tooltip -->
+            <script>
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+            return new bootstrap.Tooltip(tooltipTriggerEl)
+            })
+            </script>
+            <title>Calcul age</title>
+            <link rel="stylesheet" href="age.css">
+    </head>
+<body>
+    <div class="container mt-5 d-flex flex-column align-items-center">
+        <div class="espaceAffiche p-4">
+            <div class="row">
+                <div class="col-12">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-12 col-md-3 d-flex flex-column">
+                                <label for="day">DAY</label>
+                                <input type="text" placeholder="DD" id="day" required>
+                            </div>
+                            <div class="col-12 col-md-3 d-flex flex-column">
+                                <label for="month">MONTH</label>
+                                <input type="text" placeholder="MM" id="month" required>
+                            </div>
+                            <div class="col-12 col-md-3 d-flex flex-column">
+                                <label for="year">YEAR</label>
+                                <input type="text" placeholder="YYYY" id="year" required>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-8 mt-3">
+                                <hr>
+                            </div>
+                            <button type="button" class="col-12 col-md-1 mt-2 fleche d-flex justify-content-center align-items-center">
+                                <img src="age-calculator-app-main/assets/images/icon-arrow.svg" alt="">
+                            </button> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row mt-3 age">
+                <div class="col-12 col-md-9 d-flex flex-row">
+                    <div class="trait me-3 mt-4 ans"></div>
+                    <div class="trait me-3 mt-4"></div>
+                    <p>years</p>
+                </div>
+                <div class="col-12 col-md-9 d-flex flex-row">
+                    <div class="trait me-3 mt-4 monMois"></div>
+                    <div class="trait me-3 mt-4"></div>
+                    <p>months</p>
+                </div>
+                <div class="col-12 col-md-9 d-flex flex-row">
+                    <div class="trait me-3 mt-4 jours"></div>
+                    <div class="trait me-3 mt-4"></div>
+                    <p>days</p>
+                </div>
+            </div></div>
+    </div>
+    <script src="age.js"></script>
+</body>
+</html>

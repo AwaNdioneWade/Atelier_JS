@@ -1,0 +1,32 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(0, 0%, 85%);
+}
+
+.espaceAffiche{
+    background-color: #fff;
+    border-radius: 15px 15px 150px 15px;
+
+}
+
+.trait{
+    width: 25px;
+    height: 10px;
+    background-color: blueviolet;
+}
+.age {
+    font-family: Anton;
+    font-size: 55px;
+}
+
+.fleche{
+    background-color: blueviolet;
+    color: #fff;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    font-size: 25px;
+}

@@ -14,6 +14,7 @@ btn1.addEventListener('click', function(){
 btn2.addEventListener('click', function(){
     reponse.classList.add('show-response');
     reponse.style.background = "red";
+    reponse.style.color = "white";
 })
 
 
@@ -39,10 +40,11 @@ container.addEventListener('mouseenter', () => {
 
 container.addEventListener('mouseout', () => {
     container.style.background = "pink"
+    container.style.transform = "rotate(0deg)"
 })
 
 container.addEventListener('mouseover', () => {
-    container.style.transform = "rotate(2deg)"
+    container.style.transform = "rotate(-2deg)"
 })
 
 // --------------------------------------------------
@@ -56,6 +58,7 @@ document.addEventListener("keypress", (e) => {
         keypress.style.background = "pink"
     }else if(e.key === "m") {
         keypress.style.background = "red"
+        keypress.style.color = "white";
     }else{
         keypress.style.background = "yellow"
     }
@@ -84,7 +87,7 @@ window.addEventListener("scroll", () => {
 const inputName = document.querySelector('input[typt="text]');
 const select = document.querySelector('select');
 const form = document.querySelector('form');
-let pseudo;
+const nom = document.getElementById('nom');
 let langage = "";
 
 // inputName.addEventListener("input", (e) => {
@@ -98,7 +101,8 @@ select.addEventListener("input", (e) => {
 form.addEventListener("submit", (e) => {
     e.preventDefault();
     if(cgv.checked){
-        document.querySelector('form > div').innerHTML = `<h3>Pseud : ${pseudo}
+        let pseudo = nom.value;
+        document.querySelector('form > div').innerHTML = `<h3>Pseudo : ${pseudo}
         <h4>Langage préféré : ${langage}</h4>`;
     }else{
         alert("veillez accepter les CGV")
@@ -114,11 +118,12 @@ window.addEventListener("load", () => {
 // ---------------------------------------------
 const boxes = document.getElementsByClassName("box")
 
-boxes.forEach((box) => {
-    box.addEventListener('click', (e) => {
-        e.target.style.transform = "scale(0.7)"
-    })
-});
+// boxes.forEach((box) => {
+//     box.addEventListener('click', (e) => {
+//         e.target.style.transform = "scale(0.7)"
+//     })
+// });
+
 
 document.body.addEventListener('click', () => {
 console.log("click 1");
@@ -134,18 +139,17 @@ document.body.addEventListener('click', () => {
 // --------------------------------------
 
 container.addEventListener('click', (e) => {
-    alert("test !");
     e.stopPropagation();
 })
 
 // ---------------------------------------
 
 btn2.addEventListener('click', () => {
-    confirm("voulez vous vraiment");
+    confirm("voulez-vous vraiment quitter");
 })
-btn2.addEventListener('click', () => {
+btn1.addEventListener('click', () => {
     let answer = prompt("entrez votre nom");
-    container.innerHTML += "<h3>Brarvo" + answer + "</h3>"
+    container.innerHTML += "<h3>Brarvo " + answer + "</h3>"
 })
 
 let interval = setInterval( () => {
@@ -153,14 +157,14 @@ document.body.innerHTML += `
     <div class='box'>
         <h2>Nouvelle boite</h2>
 `;
-}, 1000)
+}, 5000)
 
-document.body.addEventListener("click", () => {
+document.body.addEventListener("click", (e) => {
     e.target.remove();
     clearInterval(interval);
 })
 
-// ------------------------------------------------
+// // ------------------------------------------------
 
 window.addEventListener("mousemove", (e) => {
     nav.style.setProperty("--x", e.layerX + "px");
