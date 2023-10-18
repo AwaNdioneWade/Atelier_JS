@@ -1,0 +1,17 @@
+h1{
+    text-align: center;
+}
+
+tr{
+    height: 40px;
+}
+table{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+tr th, tr td{
+    border: 2px solid black;
+}
