@@ -1,17 +1,32 @@
+.fa-bell{
+    font-size: 30px;
+}
+span{
+    color: red;
+    font-size: 16px;
+    font-weight: bold;
+    top: -16px;
+    left: -8px;
+    position: relative;
+}
 h1{
     text-align: center;
 }
 
-tr{
+.usersTrue tr{
     height: 40px;
 }
-table{
-    width: 50%;
+.usersTrue table{
+    width: 80%;
     margin: auto;
     text-align: center;
     border-collapse: collapse;
 }
 
-tr th, tr td{
+.usersTrue tr th, #usersTrue tr td{
     border: 2px solid black;
+}
+
+.usersTrue, #btnFalse{
+    visibility: hidden;
 }
