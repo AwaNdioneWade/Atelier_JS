@@ -4,7 +4,7 @@ compteur.textContent = n
 
 let notif = document.querySelector('.notif')
 
-let saveNotif = document.querySelector('.save=')
+let saveNotif = document.querySelector('.save')
 
 let notifBody = document.querySelector('.modal-body')
 notifBody.innerHTML = ""
@@ -33,7 +33,7 @@ btnFalse.addEventListener('click', function(){
     title.innerHTML ="Todos list no Completed";
     btnTrue.style.visibility = 'visible';
     btnFalse.style.visibility = 'hidden';
-    utilisateursTrue.style.display = 'none'
+    utilisateursTrue.style.visibility = 'hidden'
     utilisateursFalse.style.display = 'flex'
 })
 
@@ -42,34 +42,11 @@ async function fetchUsers (){
         const r = await fetch('https://jsonplaceholder.typicode.com/todos/')
         const users = await r.json()
         users.forEach(user => {
-            if (user['completed'] === true) {
-                let ligne = usersTrueTable.insertRow(-1)
-                let id = ligne.insertCell(0)
-                let title = ligne.insertCell(1)
-                let completed = ligne.insertCell(2)
-                id.textContent = `${user['id']}`
-                title.textContent = `${user['title']}`
-                completed.textContent = `${user['completed']}`                    
-            }else{
-                let ligneF = usersFalseTable.insertRow(-1)
-                let name = ligneF.insertCell(0)
-                let statut = ligneF.insertCell(1)
-                name.textContent = `${user['title']}`
-                statut.textContent = `${user['completed']}` 
-                statut.style.cursor = 'pointer'
-
-                statut.addEventListener('click', function(){
-                    notifBody.innerHTML += `${user['title']} (completed)<br>`
-                    notifBody.style.cursor = 'pointer'
-                    usersFalseTable.deleteRow(ligneF)  
-                    n ++
-                    compteur.textContent = n
-                })
-
-                notif.addEventListener('click', function(){  
-                    n = 0                  
-                    compteur.textContent = n
-                })
+            if (user['completed'] === true) {          
+                listCompleted(user)          
+            }
+            else{
+                listNoCompleted(user)
             }
         })
 
@@ -83,7 +60,61 @@ fetchUsers()
 
 
 
+function listCompleted(user) {
+    let ligne = usersTrueTable.insertRow(-1)
+    let id = ligne.insertCell(0)
+    let title = ligne.insertCell(1)
+    let completed = ligne.insertCell(2)
+    id.textContent = `${user['id']}`
+    title.textContent = `${user['title']}`
+    completed.textContent = `${user['completed']}`
+    completed.style.cursor = 'pointer'
 
+    completed.addEventListener('click', function(){
+        notifBody.innerHTML += `${user['title']} (No completed)<br>`
+        notifBody.style.cursor = 'pointer'
+        usersTrueTable.deleteRow(ligne)  
+        n ++
+        compteur.textContent = n
+
+        let save = document.querySelector('.save')
+        save.addEventListener('click', function(){
+            user['completed'] = false
+            listNoCompleted(user)
+            notifBody.innerHTML = ""
+        })
+    })
+    
+}
+
+function listNoCompleted(user){
+    let ligneF = usersFalseTable.insertRow(-1)
+    let name = ligneF.insertCell(0)
+    let statut = ligneF.insertCell(1)
+    name.textContent = `${user['title']}`
+    statut.textContent = `${user['completed']}` 
+    statut.style.cursor = 'pointer'
+
+    statut.addEventListener('click', function(){
+        notifBody.innerHTML += `${user['title']} (completed)<br>`
+        notifBody.style.cursor = 'pointer'
+        usersFalseTable.deleteRow(ligneF)  
+        n ++
+        compteur.textContent = n
+
+        let save = document.querySelector('.save')
+        save.addEventListener('click', function(){
+            user['completed'] = true
+            listCompleted(user)
+            notifBody.innerHTML = ""
+        })
+    })
+
+    notif.addEventListener('click', function(){  
+        n = 0                  
+        compteur.textContent = n
+    })
+}
 
 
 
